@@ -1,0 +1,60 @@
+{
+  "name": "reflink",
+  "version": "1.0.0",
+  "description": "Self-hosted affiliate & referral program you own forever. Tracking links, click + conversion attribution, commission dashboard, payout export. Pay once — no Tapfiliate subscription.",
+  "author": "Ben (bensblueprints)",
+  "license": "MIT",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "postinstall": "node scripts/setup-native.js",
+    "desktop": "electron .",
+    "test": "node test/smoke.js",
+    "dist": "npm run build && electron-builder --win nsis"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.2.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "@vitejs/plugin-react": "^4.4.0",
+    "electron": "^33.4.0",
+    "electron-builder": "^25.1.8",
+    "framer-motion": "^11.18.2",
+    "lucide-react": "^0.474.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.1.0",
+    "vite": "^6.3.5"
+  },
+  "build": {
+    "appId": "com.bensblueprints.reflink",
+    "productName": "Reflink",
+    "files": [
+      "electron/**",
+      "server/**",
+      "dist/**",
+      "vendor/**",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "output": "release"
+    },
+    "asarUnpack": [
+      "vendor/**"
+    ]
+  }
+}

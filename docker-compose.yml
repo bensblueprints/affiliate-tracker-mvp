@@ -1,0 +1,16 @@
+services:
+  reflink:
+    build: .
+    container_name: reflink
+    restart: unless-stopped
+    ports:
+      - "5350:5350"
+    environment:
+      - PORT=5350
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-change-me}
+      - DB_PATH=/app/data/reflink.db
+    volumes:
+      - reflink-data:/app/data
+
+volumes:
+  reflink-data:
