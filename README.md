@@ -61,7 +61,7 @@ If you need multi-level marketing trees and 40 native integrations, buy Tapfilia
 
 ## ☕ Skip the setup — get the 1-click installer
 
-The source is MIT and always will be. If you'd rather have a packaged Windows installer with updates: **[Get Reflink on Whop →](https://whop.com/onetime-suite)**
+The source is MIT and always will be. If you'd rather have a packaged Windows installer with updates: **[Get Reflink on Whop →](https://whop.com/benjisaiempire/reflink)**
 
 ## Tech stack
 
