@@ -1,5 +1,9 @@
 # 🔗 Reflink — affiliate tracking you own forever
 
+## Demo
+
+VIDEO-PLACEHOLDER
+
 ![MIT License](https://img.shields.io/badge/license-MIT-green.svg)
 
 Self-hosted affiliate & referral program software. Give every affiliate a tracking link, count their clicks, attribute their conversions, compute their commissions, and export the payout CSV — from one Node process and one SQLite file that you own.
